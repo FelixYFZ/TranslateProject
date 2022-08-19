@@ -7,12 +7,15 @@
 [#]: publisher: ( )
 [#]: url: ( )
 What you need to know about security policies
+关于安全策略你所需要知道的
 ======
 Learn about protecting your personal computer, server, and cloud systems
 with SELinux, Kubernetes pod security, and firewalls.
+学习如何使用Selinux,Kubernets pod security 和防火墙去保护你的个人电脑,服务器以及云系统.
 ![Lock][1]
 
 A **security policy** is a set of permissions that govern access to a system, whether the system is an organization, a computer, a network, an application, a file, or any other resource. Security policies often start from the top down: Assume nobody can do anything, and then allow exceptions.
+安全策略是指一套对系统的访问访问权限的控制设置,这个系统可以是一个组织的,一台电脑的,一个网络,一套应用,一个文件,或者任何其他的资源.安全策略经常是从上往下开始,默认是任何人都不能做任何事,然后去设置特殊的许可.
 
 On a desktop PC, the default policy is that no user may interact with the computer until after logging in. Once you've successfully logged in, you inherit a set of digital permissions (in the form of metadata associated with your login account) to perform some set of actions. The same is true for your phone, a server or network on the internet, or any node in the cloud.
 

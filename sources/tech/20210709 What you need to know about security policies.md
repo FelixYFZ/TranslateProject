@@ -21,14 +21,17 @@ On a desktop PC, the default policy is that no user may interact with the comput
 在一台个人电脑上，默认的策略是在没人登录前，电脑和用户之间是没有任何互动操作的。一旦你成功的登录进去，你的账户会继承一套实现特定功能行为的权限(会以元数据的形式附加到你的账户里)。这写默认的行为功能同样适用于在互联网上的你的手机，服务器，或者网络设备，或者是任何其他在云上的节点。
 
 There are security policies designed for filesystems, firewalls, services, daemons, and individual files. Securing your digital infrastructure is a job that's never truly finished, and that can seem frustrating and intimidating. However, security policies exist so that you don't have to think about who or what can access your data. Being comfortably familiar with potential security issues is important, and reading through known security issues (such as NIST's great [RSS feed][2] for [CVE entries][3]) over your [power breakfast][4] can be more eye-opening than a good cup of coffee, but equally important is being familiar with the tools at your disposal to give you sensible defaults. These vary depending on what you're securing, so this article focuses on three areas: your personal computer, the server, and the cloud.
-有为文件系统，防火墙，服务，进程和个人文件设计的安全策略。保护你的数字化基础架构是一项永远不会结束的工作，而且那可能会是让人沮丧和令人紧张不安的。然而，在有安全策略保障的情况下，你就不需要去担心任何人或其他什么对你的数据的访问。对安全问题的精通熟悉是很重要的，
+有为文件系统，防火墙，服务，进程和个人文件设计的安全策略。保护你的数字化基础架构是一项永远不会结束的工作，而且那可能会是让人沮丧和令人紧张不安的。然而，在有安全策略保障的情况下，你就不需要去担心任何人或其他什么对你的数据的访问。对安全问题的精通熟悉是很重要的，在早餐的时间阅读已知的安全问题(比如NIST上的对CVE条目的该概要)比一杯好的咖啡更能令人开阔眼界。但是同样重要的是对可以给你建立合理的预设值的可以任由你自由支配的工具的熟悉。这些是要根据你所要设置安全保护的内容来做区分，所以这篇文章重点关注三个领域：你的个人电脑，服务器，以及云服务。
 ### SELinux
 
 [SELinux][5] is a **labeling system** for your personal computer, servers, and the Linux nodes of the cloud. On a modern Linux system running SELinux, every process has a label, as does every file and directory. In fact, any system object gets a label. Luckily, you're not the one who has to do the labeling. These labels are created for you automatically by SELinux.
+对你的个人电脑，服务器，云服务真的Linux 节点来说，Selinux是一个标记系统。在一套现代的运行Selinux的Linux系统上，每一个进程，每一个文件以及每一个目录都会有一个标签。实际上，任何一个系统对象多都会有一个标签，幸运的是， 你不需要去手动的来打标签。这些标签都是Selinux自动创建的。
 
-Policy rules govern what access is granted between labeled **processes** and labeled **objects**. The kernel enforces these rules. In other words, SELinux can ensure that an action is safe whether a user appears to deserve the right to perform that action or not. It does this by understanding what processes are permitted. This protects a system from a bad actor who gains escalated permissions—whether it's through a security exploit or by wandering over to your desk after you've gotten up for a coffee refill—by understanding the expected interactions of all of your computer's components.
+Policy rules govern what access is granted between labeled **processes** and labeled **objects**. The kernel enforces these rules. In other words, SELinux can ensure that an action is safe whether a user appears to deserve the right to perform that action or not. It does this by understanding what processes are permitted. This protects a system from a bad actor who gains escalated permissions—whether it's through a security exploit or by wandering over to your desk after you've gotten up for a coffee refill—by understanding the expected interactions of all of your computer's components。
+策略规则来管理控制赋予标记的进程和对象的权限。内核来执行这些规则。从另一方面来说，Selinux能够确保一个行为动作是安全的，无论是一个用户获得了执行某个动作或或者没有获得的权限。它通过理解进程被赋予的权限来执行这些操作管控。它通过理解你的电脑的所有组件的预期互动行为来保护你的系统免受一个通过安全渗透或者趁你去咖啡续杯的时候来到你的桌前获取高级权限的破坏者的行为。
 
 For more information about SELinux, read our [illustrated guide to SELinux][6] by Dan Walsh. To learn more about using SELinux, read [A sysadmin's guide to SELinux][7] by Alex Callejas, and download our free [SELinux cheat sheet][8].
+想获取更多关于SelinuxDefinitely信息，请阅读Dan Walsh的[illustrated guide to SELinux]。想要学习如何使用Selinux，请阅读Alex Callejas的[A sysadmin's guide to SELinux][7],免费下载[SELinux cheat sheet][8].
 
 ### Kubernetes pod security
 

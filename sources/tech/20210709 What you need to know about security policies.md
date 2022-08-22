@@ -51,22 +51,31 @@ Pod Security Policies are deprecated and will be removed in Kubernetes 1.25. In 
 Pod安全策略别弃用了，将会在Kubernets 1.25版本中被移除。Kubernets社区兴趣小组的Tabitha Sabl写了关于弃用和替换安全策略的文章[deprecation and replacement of Pod Security Policies][11]. 有一个开放的请求提议，通过一个新的管理控制器来加强pod安全标准的Kubernets改进[Kubernetes enhancements][12].这被用来建议作为弃用的安全测策略的替代。架构已经被确认了，然而，有一个有带有很多附件软件和相互关联的服务需要被混合和匹配来提供覆盖范围的庞大的系统来满足组织的需求。
 
 For now, Kubernetes has published [Pod Security Standards][13] describing the overall concept of layered policy types, from totally unrestricted **Privileged** pods to minimally restricted **Baseline** and then heavily **Restricted** policies, and publishing these example policies as Pod Security Policies. The documentation describes what restrictions make up these different profiles and provide an excellent starting point to get familiar with different types of restrictions that might be applied to a pod to increase security.
+目前，Kubernets已经发布了pod安全标准[Pod Security Standards][13]描述了策略类型的整个分层的概念，从完全无限制的特权的pods到最小限制的最基本权限，然后是严格管控限制的策略，而且发布了这些策略案列作为Pod的安全策略。文档描述了不同种类的配置文件的组成部分而且对于熟悉不同类型可能会应用于pod的安全提升来说提供了一个很不错的开始。
 
 #### Future of security policies
+#### 安全策略的未来
 
 The future of pod security in Kubernetes will likely include an admission controller like the one proposed in the enhancement PR and a mix of add-ons for tweaking and adjusting how pods run in the cluster, such as [Open Policy Agent][14] (OPA). Kubernetes is extremely flexible given just how complicated its job is, and this change follows the same pattern that has allowed Kubernetes to be so successful: managing container orchestration well and allowing an entire ecosystem of add-ons and tools to enhance and extend the core so that it is not a one-size-fits-all solution.
+在Kubernetes中的pod安全的未来可能会包括一个管理控制器就像PR强化中的提议的那样，而且一个混合的附加软件来调整pods在集群中如何运行，比如[Open Policy Agent][14] (OPA).Kubernets非常灵活，因为它的工作非常复杂，而且这个变更遵循了同样的模式使得Kubernets非常的成功：优秀的容器管理编排能力，允许带附件软件和工具的整个系统来强化和扩展内核从而让它并不是一个通用的解决方案。
 
 ### Firewalls
+### 防火墙
 
 Protecting your network is just as important as protecting the computers inside it. For that, there are firewalls. Some firewalls come embedded in routers, but computers have firewalls too, and in large organizations, they run the firewall for the entire network.
+保护网络和保护网络中的电脑一样重要。所以，有了防火墙。有些防火墙是内置在路由器中的，但是电脑也是有防火墙的，在较大的组织中，他们为整个网络运行防火墙。
 
 Typical firewall policies are constructed by denying all traffic, followed by judicious exceptions for necessary incoming and outgoing communication. Individual users can learn more about the `firewall-cmd` in Seth Kenlon's [Getting started with Linux firewalls][15]. Sysadmins can learn more about firewalls in Seth's [Secure your network with firewall-cmd][16]. And both users and admins can benefit from our free [firewall-cmd cheat sheet][17].
+典型的防火墙策略设置阻止所有的流量，然后配置明确的必要的进出通讯的额外策略。个人用户可以通过Seth Kenlon的[Getting started with Linux firewalls][15]的文章来学习'firewall-cmd'.
+系统管理员可以通过Seth的[Secure your network with firewall-cmd][16]来学习。无论是普通用户还是管理员都能够通过我们免费的[firewall-cmd cheat sheet][17]来获取想要的知识技能。
 
 ### Security policies
+### 安全策略
 
 Security policies are important for protecting people and their data no matter what the system. Buildings and tech conferences need security policies to keep people physically safe, and computers need security policies to keep data safe from abuse.
-
+安全策略对于任何系统的用户和他们的数据的保护是很重要的。建筑和技术会议需要安全策略来保障人们的的物理安全，电脑需要安全策略来保证数据安全防止被滥用。
 Spend some time thinking about the security of the systems in your life, getting familiar with the default policies, and choosing your level of comfort for the different risks you identify. Then establish a security policy, and stick to it. As with [backup plans][18], security won't get addressed unless it's _easy_, so make it second nature to maintain good security practices.
+
 
 --------------------------------------------------------------------------------
 

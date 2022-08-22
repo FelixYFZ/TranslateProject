@@ -75,7 +75,7 @@ Typical firewall policies are constructed by denying all traffic, followed by ju
 Security policies are important for protecting people and their data no matter what the system. Buildings and tech conferences need security policies to keep people physically safe, and computers need security policies to keep data safe from abuse.
 安全策略对于任何系统的用户和他们的数据的保护是很重要的。建筑和技术会议需要安全策略来保障人们的的物理安全，电脑需要安全策略来保证数据安全防止被滥用。
 Spend some time thinking about the security of the systems in your life, getting familiar with the default policies, and choosing your level of comfort for the different risks you identify. Then establish a security policy, and stick to it. As with [backup plans][18], security won't get addressed unless it's _easy_, so make it second nature to maintain good security practices.
-
+在你的生活中花些时间来来想想系统的安全性，熟悉默认的策略，为你鉴别出的不同的风险选择合适的等级。然后创建一套安全策略并专注于它。并准备一个备份计划，安全不会被解决除非它很容易，所以保持良好的安全实践作为你的第二天性。
 
 --------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ via: https://opensource.com/article/21/7/what-security-policy
 
 作者：[Chris Collins][a]
 选题：[lujun9972][b]
-译者：[译者ID](https://github.com/译者ID)
+译者：[译者ID](https://github.com/FelixYFZ)
 校对：[校对者ID](https://github.com/校对者ID)
 
 本文由 [LCTT](https://github.com/LCTT/TranslateProject) 原创编译，[Linux中国](https://linux.cn/) 荣誉推出
